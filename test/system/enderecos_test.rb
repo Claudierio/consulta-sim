@@ -19,6 +19,7 @@ class EnderecosTest < ApplicationSystemTestCase
     fill_in "Cidade", with: @endereco.cidade
     fill_in "Complemento", with: @endereco.complemento
     fill_in "Logradouro", with: @endereco.logradouro
+    fill_in "Paciente", with: @endereco.paciente_id
     click_on "Create Endereco"
 
     assert_text "Endereco was successfully created"
@@ -34,6 +35,7 @@ class EnderecosTest < ApplicationSystemTestCase
     fill_in "Cidade", with: @endereco.cidade
     fill_in "Complemento", with: @endereco.complemento
     fill_in "Logradouro", with: @endereco.logradouro
+    fill_in "Paciente", with: @endereco.paciente_id
     click_on "Update Endereco"
 
     assert_text "Endereco was successfully updated"
