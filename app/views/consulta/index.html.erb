@@ -1,14 +1,60 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de Consulta</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          text-align: center;
+          background-color: #007bff;
+      }
 
-<h1>Consulta</h1>
+      h1 {
+          color: #fff;
+          font-size: 32px;
+      }
 
-<div id="consulta">
-  <% @consulta.each do |consultum| %>
-    <%= render consultum %>
-    <p>
-      <%= link_to "Show this consultum", consultum %>
-    </p>
-  <% end %>
+      p {
+          color: green;
+      }
+
+      #consulta {
+          margin-top: 20px;
+          text-align: left;
+      }
+
+      #consulta p {
+          margin-bottom: 10px;
+      }
+
+      #consulta a {
+          color: #fff;
+          text-decoration: none;
+      }
+
+      #consulta a:hover {
+          text-decoration: underline;
+      }
+  </style>
+</head>
+<body>
+<div class="container">
+  <p style="color: green;"><%= notice %></p>
+
+  <h1>Consulta</h1>
+
+  <div id="consulta">
+    <% @consulta.each do |consultum| %>
+      <%= render consultum %>
+      <p>
+        <%= link_to "Show this consultum", consultum %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New consultum", new_consultum_path %>
 </div>
-
-<%= link_to "New consultum", new_consultum_path %>
+</body>
+</html>
