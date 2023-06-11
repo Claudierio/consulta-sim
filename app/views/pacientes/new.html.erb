@@ -1,11 +1,11 @@
 <%= stylesheet_link_tag 'custom' %>
 
-<h1>New paciente</h1>
+<h1>Novo paciente</h1>
 
 <%= render "form", paciente: @paciente %>
 
 <br>
 
 <div>
-  <%= link_to "Back to pacientes", pacientes_path %>
+  <button onclick="window.location.href='<%= pacientes_path %>'">Voltar</button>
 </div>

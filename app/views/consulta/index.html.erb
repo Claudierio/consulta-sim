@@ -8,13 +8,13 @@
 <div class="container">
   <p style="color: green;"><%= notice %></p>
 
-  <h1>Consulta</h1>
+  <h1>Consultas</h1>
 
   <div id="consulta">
     <% @consulta.each do |consultum| %>
       <%= render consultum %>
       <p>
-        <%= link_to "Show this consultum", consultum %>
+        <button onclick="window.location.href='<%= consultum_path(consultum) %>'">Show this consultum</button>
       </p>
     <% end %>
   </div>

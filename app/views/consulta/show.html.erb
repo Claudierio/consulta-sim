@@ -1,12 +1,15 @@
 <%= stylesheet_link_tag 'custom' %>
 
-<p style="color: green"><%= notice %></p>
+<p style="color: green; text-shadow: 2px 2px 4px white;"><%= notice %></p>
 
 <%= render @consultum %>
 
 <div>
-  <%= link_to "Edit this consultum", edit_consultum_path(@consultum) %> |
-  <%= link_to "Back to consulta", consulta_path %>
+  <button onclick="window.location.href='<%= edit_consultum_path(@consultum) %>'">Editar consulta</button> |
+  <button onclick="window.location.href='<%= consulta_path %>'">Voltar</button>
 
-  <%= button_to "Destroy this consultum", @consultum, method: :delete %>
+  <form action="<%= consultum_path(@consultum) %>" method="post">
+    <%= button_to "Apagar consulta", @consultum, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </form>
+
 </div>

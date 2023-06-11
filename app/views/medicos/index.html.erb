@@ -1,5 +1,17 @@
 <%= stylesheet_link_tag 'custom' %>
 
+<h1>Médicos</h1>
+
+<div id="medicos">
+  <% @medicos.each do |medico| %>
+    <%= render medico %>
+    <p>
+      <button onclick="window.location.href='<%= medico_path(medico) %>'">Mostrar esse médico</button>
+
+    </p>
+  <% end %>
+</div>
+
 <button onclick="window.location.href='<%= new_medico_path %>'">Novo médico</button>
 <br> <br>
 <button onclick="window.location.href='/'">Voltar para a página inicial</button>

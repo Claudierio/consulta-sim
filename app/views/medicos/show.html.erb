@@ -1,12 +1,13 @@
 <%= stylesheet_link_tag 'custom' %>
 
-<p style="color: green"><%= notice %></p>
+<p style="color: green; text-shadow: 2px 2px 4px white;"><%= notice %></p>
 
 <%= render @medico %>
 
 <div>
-  <%= link_to "Edit this medico", edit_medico_path(@medico) %> |
-  <%= link_to "Back to medicos", medicos_path %>
 
-  <%= button_to "Destroy this medico", @medico, method: :delete %>
+  <button onclick="window.location.href='<%= edit_medico_path(@medico) %>'">Editar Médico</button> |
+  <button onclick="window.location.href='<%= medicos_path %>'">Voltar</button>
+
+  <!--<%= button_to "Destroy this medico", @medico, method: :delete %>-->
 </div>

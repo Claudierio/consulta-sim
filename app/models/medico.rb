@@ -1,4 +1,4 @@
 class Medico < ApplicationRecord
-  has_many :consultums
-  has_many :pacientes
+  has_many :consultas
+  has_many :pacientes, through: :consultas
 end

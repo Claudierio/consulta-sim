@@ -3,8 +3,8 @@ class CreateConsulta < ActiveRecord::Migration[7.0]
     create_table :consulta do |t|
       t.date :data
       t.string :horario
-      t.string :medico
-      t.string :paciente
+      t.references :medico, null: false, foreign_key: true
+      t.references :paciente, null: false, foreign_key: true
 
       t.timestamps
     end

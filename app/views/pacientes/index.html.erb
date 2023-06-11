@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'custom' %>
 
-<p style="color: green"><%= notice %></p>
+<p style="color: green; text-shadow: 2px 2px 4px white;"><%= notice %></p>
 
 <h1>Pacientes</h1>
 
@@ -8,7 +8,8 @@
   <% @pacientes.each do |paciente| %>
     <%= render paciente %>
     <p>
-      <%= link_to "Show this paciente", paciente %>
+      <button onclick="window.location.href='<%= paciente_path(paciente) %>'">Mostrar esse paciente</button>
+
     </p>
   <% end %>
 </div>
