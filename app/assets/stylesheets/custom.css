@@ -1,0 +1,53 @@
+/* custom.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #007bff;
+}
+
+h1 {
+    color: #fff;
+    font-size: 32px;
+}
+
+p {
+    color: green;
+}
+
+#consulta {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#consulta p {
+    margin-bottom: 10px;
+}
+
+#consulta a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#consulta a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #fff;
+    border: none;
+    color: #007bff;
+    padding: .9rem 4rem;
+    border-radius: 3rem;
+    display: inline-block;
+    box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+button:hover {
+    background-color: #BBBBBB;
+}
