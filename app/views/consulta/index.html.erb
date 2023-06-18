@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Página de Consulta</title>
-  <%= stylesheet_link_tag 'custom' %>
-</head>
-<body>
-<div class="container">
-  <p style="color: green;"><%= notice %></p>
+<%= stylesheet_link_tag 'custom' %>
 
-  <h1>Consultas</h1>
+<style>
+    .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+</style>
 
-  <div id="consulta">
-    <% @consulta.each do |consultum| %>
-      <%= render consultum %>
-      <p>
-        <button onclick="window.location.href='<%= consultum_path(consultum) %>'">Show this consultum</button>
-      </p>
-    <% end %>
-  </div>
+<p style="color: green; text-shadow: 2px 2px 4px white;"><%= notice %></p>
 
-  <button onclick="window.location.href='<%= new_consultum_path %>'">Nova consulta</button>
-  <br> <br>
-  <button onclick="window.location.href='/'">Voltar para a página inicial</button>
+<h1>Consultas</h1>
+
+<div id="consulta" class="center">
+  <% @consulta.each do |consultum| %>
+    <%= render consultum %>
+    <p>
+      <button onclick="window.location.href='<%= consultum_path(consultum) %>'">Mostrar essa consulta</button>
+    </p>
+  <% end %>
 </div>
-</body>
-</html>
+
+<br><br>
+<button onclick="window.location.href='<%= new_consultum_path %>'">Nova consulta</button> |
+<button onclick="window.location.href='/'">Voltar para a página inicial</button>
