@@ -1,5 +1,5 @@
 class Medico < ApplicationRecord
-  has_many :consultas
+  has_many :consultas, class_name: 'Consultum'
   has_many :pacientes, through: :consultas
 
   validates :nome, presence: true, length: {in: 5..40}
