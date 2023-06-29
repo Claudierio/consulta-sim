@@ -22,6 +22,8 @@ class ConsultaController < ApplicationController
   # POST /consulta or /consulta.json
   def create
     @consultum = Consultum.new(consultum_params)
+    @consultum.medico = Medico.find(params[:consultum][:medico_id])
+    @consultum.paciente = Paciente.find(params[:consultum][:paciente_id])
 
     respond_to do |format|
       if @consultum.save
@@ -33,6 +35,7 @@ class ConsultaController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /consulta/1 or /consulta/1.json
   def update
